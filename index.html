@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagram Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Diagram Studio</h1>
+        <p>Create Use Case • Class • System Sequence Diagrams</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="editor glass">
+                <h2>Write Your Diagram Code</h2>
+                <label for="diagramType">Select Diagram Type:</label>
+                <select id="diagramType">
+                    <option value="usecase">Use Case Diagram</option>
+                    <option value="class">Class Diagram</option>
+                    <option value="sequence">System Sequence Diagram</option>
+                </select>
+
+                <textarea id="codeInput" placeholder="Write your diagram code here..."></textarea>
+
+                <button id="renderBtn">Render Diagram</button>
+            </div>
+
+            <div class="preview glass">
+                <h2>Diagram Preview</h2>
+                <div id="diagram"></div>
+
+                <div class="download-box">
+                    <button id="downloadSVG">Download SVG</button>
+                    <button id="downloadPNG">Download PNG</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
